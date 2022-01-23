@@ -26,4 +26,7 @@ public class graph {
             }
             System.out.println();
       }
+      public static void construction(){
+            
+      }
 }
