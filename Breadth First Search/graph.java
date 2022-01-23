@@ -17,9 +17,12 @@ public class graph {
             graph[u].add(new Edge(u, v, w));
             graph[v].add(new Edge(v, u, w));
       }
-      public static void display(ArrayList<Edge>[] graph,int N){
-for(int i=0; i<N; i++){
-      
-}
+
+      public static void display(ArrayList<Edge>[] graph, int N) {
+            for (int i = 0; i < N; i++) {
+                  System.out.print(i + " -> ");
+                  for(Edge e:graph[i])
+                  System.out.println("( "+e.nbr+", "+e.wt+" )");
+            }
       }
 }
