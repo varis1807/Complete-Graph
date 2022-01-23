@@ -26,7 +26,11 @@ public class graph {
             }
             System.out.println();
       }
-      public static void construction(){
-            
+
+      public static void construction() {
+            int N = 7;
+            ArrayList<Edge>[] graph = new ArrayList[N];
+            for (int i = 0; i < N; i++)
+                  graph[i] = new ArrayList<>();
       }
 }
