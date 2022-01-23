@@ -22,9 +22,10 @@ public class graph {
             for (int i = 0; i < N; i++) {
                   System.out.print(i + " -> ");
                   for (Edge e : graph[i])
-                        System.out.print("( " + e.nbr + ", " + e.wt + " )");
+                        System.out.print(" (" + e.nbr + "," + e.wt + ") ");
+                  System.out.println();
             }
-            System.out.println();
+
       }
 
       public static void construction() {
@@ -42,7 +43,8 @@ public class graph {
             addEdge(graph, 5, 6, 3);
             display(graph, N);
       }
+
       public static void main(String[] args) {
-            
+            construction();
       }
 }
