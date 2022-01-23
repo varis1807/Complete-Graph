@@ -17,7 +17,9 @@ public class graph {
             graph[u].add(new Edge(u, v, w));
             graph[v].add(new Edge(v, u, w));
       }
-      public static void display(){
-            
+      public static void display(ArrayList<Edge>[] graph,int N){
+for(int i=0; i<N; i++){
+      
+}
       }
 }
