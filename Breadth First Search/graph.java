@@ -17,4 +17,7 @@ public class graph {
             graph[u].add(new Edge(u, v, w));
             graph[v].add(new Edge(v, u, w));
       }
+      public static void display(){
+            
+      }
 }
