@@ -32,5 +32,17 @@ public class graph {
             ArrayList<Edge>[] graph = new ArrayList[N];
             for (int i = 0; i < N; i++)
                   graph[i] = new ArrayList<>();
+            addEdge(graph, 0, 1, 10);
+            addEdge(graph, 0, 3, 10);
+            addEdge(graph, 1, 2, 10);
+            addEdge(graph, 2, 3, 40);
+            addEdge(graph, 3, 4, 2);
+            addEdge(graph, 4, 5, 2);
+            addEdge(graph, 4, 6, 8);
+            addEdge(graph, 5, 6, 3);
+            display(graph, N);
+      }
+      public static void main(String[] args) {
+            
       }
 }
