@@ -61,6 +61,6 @@ public class getConnectedComponent {
       }
 
       public static void main(String[] args) {
-            construction();
+            construction();;;;;
       }
 }
