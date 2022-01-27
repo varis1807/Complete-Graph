@@ -12,6 +12,13 @@ public class directedGraph {
                   for (Edge e : graph[i]) {
                         System.out.print("( " + e.nbr + " @ " + e.wt + " )");
                   }
+                  System.out.println();
             }
+      }
+
+      public static void construction() {
+            int N = 7;
+            ArrayList<Edge>[] graph = new ArrayList[7];
+
       }
 }
