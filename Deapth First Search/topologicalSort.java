@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class topologicalSort {
-      public void dfs_topo(int src, ArrayList<Edge>[] graph, boolean[] vis, ArrayList<Integer> topo) {
+      public static void dfs_topo(int src, ArrayList<Edge>[] graph, boolean[] vis, ArrayList<Integer> topo) {
             vis[src] = true;
 
             for (Edge e : graph[src]) {
@@ -13,7 +13,7 @@ public class topologicalSort {
             topo.add(src);
       }
 
-      public void topological_order(ArrayList<Edge>[] graph) {
+      public static void topological_order(ArrayList<Edge>[] graph) {
             int V = graph.length;
 
             boolean[] vis = new boolean[V];
