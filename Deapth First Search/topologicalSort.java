@@ -58,7 +58,7 @@ public class topologicalSort {
             addedge(graph, 4, 5, 60);
             addedge(graph, 4, 6, 70);
             // display(graph);
-
+            topological_order(graph);
       }
 
       public static void main(String[] args) {
