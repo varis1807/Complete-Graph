@@ -1,33 +1,35 @@
 import java.util.*;
+
 public class topologicalSort {
-      public void dfs_topo(int src,ArrayList<Edge>[] graph,boolean[] vis,ArrayList<Integer> topo){
-            vis[src]=true;
-    
-            for(Edge e:graph[src]){
-                if(!vis[e.nbr]){
-                    dfs_topo(e.nbr,graph,vis,topo);
-                }
+      public void dfs_topo(int src, ArrayList<Edge>[] graph, boolean[] vis, ArrayList<Integer> topo) {
+            vis[src] = true;
+
+            for (Edge e : graph[src]) {
+                  if (!vis[e.nbr]) {
+                        dfs_topo(e.nbr, graph, vis, topo);
+                  }
             }
-    
+
             topo.add(src);
-        }
-    
-        public void topological_order(ArrayList<Edge>[] graph){
-            int V=graph.length;
-    
-            boolean[] vis=new boolean[V];
-            ArrayList<Integer> topo=new ArrayList<>();
-            for(int i=0; i<V; i++){
-                if(!vis[i]){
-                    dfs_topo(i,graph,vis,topo);
-                }
+      }
+
+      public void topological_order(ArrayList<Edge>[] graph) {
+            int V = graph.length;
+
+            boolean[] vis = new boolean[V];
+            ArrayList<Integer> topo = new ArrayList<>();
+            for (int i = 0; i < V; i++) {
+                  if (!vis[i]) {
+                        dfs_topo(i, graph, vis, topo);
+                  }
             }
-    
-            for(int i=topo.size()-1; i>=0; i--){
-                System.out.println(topo.get(i));
+
+            for (int i = topo.size() - 1; i >= 0; i--) {
+                  System.out.println(topo.get(i));
             }
-        }
-        public static void addedge(ArrayList<Edge>[] graph, int u, int v, int w) {
+      }
+
+      public static void addedge(ArrayList<Edge>[] graph, int u, int v, int w) {
             graph[u].add(new Edge(u, v, w));
       }
 
@@ -55,11 +57,12 @@ public class topologicalSort {
             addedge(graph, 4, 3, 50);
             addedge(graph, 4, 5, 60);
             addedge(graph, 4, 6, 70);
-            display(graph);
+            // display(graph);
+
       }
 
       public static void main(String[] args) {
             construction();
       }
-     
+
 }
