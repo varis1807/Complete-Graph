@@ -43,8 +43,8 @@ public class kans_TopologicalSort {
       }
 
       public static void construction() {
-            int N = 8;
-            ArrayList<Edge>[] graph = new ArrayList[8];
+            int N = 12;
+            ArrayList<Edge>[] graph = new ArrayList[N];
             for (int i = 0; i < N; i++) {
                   graph[i] = new ArrayList<>();
             }
