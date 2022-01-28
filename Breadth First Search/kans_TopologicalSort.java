@@ -1,6 +1,8 @@
 import java.util.*;
 public class kans_TopologicalSort {
-      public static 
+      public static void topoSort(ArrayList<Edge>[]graph){
+            
+      }
 
       public static void addedge(ArrayList<Edge>[] graph, int u, int v, int w) {
             graph[u].add(new Edge(u, v, w));
