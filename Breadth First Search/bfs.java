@@ -24,9 +24,9 @@ public class bfs {
                         }
 
                         vis[ele] = true;
-                        for (Edge nbr : graph[ele]) {
-                              if (!vis[nbr.v]) {
-                                    que.addLast(nbr.v);
+                        for (Edge e : graph[ele]) {
+                              if (!vis[e.nbr]) {
+                                    que.addLast(e.nbr);
                               }
                         }
                   }
@@ -57,10 +57,10 @@ public class bfs {
                   while (size-- > 0) {
                         int ele = que.removeFirst();
 
-                        for (Edge nbr : graph[ele]) {
-                              if (!vis[nbr.v]) {
-                                    vis[nbr.v] = true;
-                                    que.addLast(nbr.v);
+                        for (Edge e : graph[ele]) {
+                              if (!vis[e.nbr]) {
+                                    vis[e.nbr] = true;
+                                    que.addLast(e.nbr);
                               }
                         }
                   }
