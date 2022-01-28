@@ -3,7 +3,11 @@ import java.util.*;
 public class kans_TopologicalSort {
       public static void topoSort(ArrayList<Edge>[] graph) {
             int vrtx = graph.length;
-
+            int[] inDgree = new int[vrtx];
+            for (int i = 0; i < vrtx; i++) {
+                  for (Edge e : graph[i])
+                        inDgree[e.nbr]++;
+            }
       }
 
       public static void addedge(ArrayList<Edge>[] graph, int u, int v, int w) {
