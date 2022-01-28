@@ -43,18 +43,20 @@ public class kans_TopologicalSort {
       }
 
       public static void construction() {
-            int N = 7;
-            ArrayList<Edge>[] graph = new ArrayList[7];
+            int N = 8;
+            ArrayList<Edge>[] graph = new ArrayList[8];
             for (int i = 0; i < N; i++) {
                   graph[i] = new ArrayList<>();
             }
-            addedge(graph, 0, 1, 10);
-            addedge(graph, 0, 3, 20);
-            addedge(graph, 1, 2, 30);
-            addedge(graph, 2, 3, 40);
-            addedge(graph, 4, 3, 50);
-            addedge(graph, 4, 5, 60);
-            addedge(graph, 4, 6, 70);
+            addedge(graph, 5, 11, 10);
+            addedge(graph, 7, 11, 20);
+            addedge(graph, 7, 8, 10);
+            addedge(graph, 3, 8, 40);
+            addedge(graph, 3, 10, 50);
+            addedge(graph, 11, 2, 60);
+            addedge(graph, 11, 9, 70);
+            addedge(graph, 11, 10, 70);
+            addedge(graph, 8, 9, 70);
             // display(graph);
             // topological_order(graph);
             System.out.println(topoSort(graph));
