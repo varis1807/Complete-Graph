@@ -1,10 +1,11 @@
 import java.util.*;
 public class journeyToMoon {
+      public static int dfsJourney(int src, List<List<Integer>> graph, boolean[] vis){
       vis[src] = true;
       int size = 0;
-      for(int nbr:graph.get(src)){
-              if(!vis[nbr]){
-                  size += dfsJourney(nbr, graph, vis);
+      for(int e:graph.get(src)){
+              if(!vis[e]){
+                  size += dfsJourney(e, graph, vis);
               }
       }
       return size+1;
