@@ -2,6 +2,7 @@ import java.util.*;
 
 public class kans_TopologicalSort {
       public static void topoSort(ArrayList<Edge>[] graph) {
+            int vrtx = graph.length;
 
       }
 
