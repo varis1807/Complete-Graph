@@ -43,7 +43,7 @@ public class kans_TopologicalSort {
       }
 
       public static void construction() {
-            int N = 12;
+            int N = 13;
             ArrayList<Edge>[] graph = new ArrayList[N];
             for (int i = 0; i < N; i++) {
                   graph[i] = new ArrayList<>();
@@ -57,9 +57,9 @@ public class kans_TopologicalSort {
             addedge(graph, 11, 9, 70);
             addedge(graph, 11, 10, 70);
             addedge(graph, 8, 9, 70);
-            // display(graph);
+             display(graph);
             // topological_order(graph);
-            System.out.println(topoSort(graph));
+           // System.out.println(topoSort(graph));
       }
 
       public static void main(String[] args) {
