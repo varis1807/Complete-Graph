@@ -1,7 +1,8 @@
 import java.util.*;
+
 public class kans_TopologicalSort {
-      public static void topoSort(ArrayList<Edge>[]graph){
-            
+      public static void topoSort(ArrayList<Edge>[] graph) {
+
       }
 
       public static void addedge(ArrayList<Edge>[] graph, int u, int v, int w) {
@@ -33,7 +34,7 @@ public class kans_TopologicalSort {
             addedge(graph, 4, 5, 60);
             addedge(graph, 4, 6, 70);
             // display(graph);
-           // topological_order(graph);
+            // topological_order(graph);
       }
 
       public static void main(String[] args) {
