@@ -46,7 +46,7 @@ public class topologicalSort {
 
       public static void construction() {
             int N = 7;
-            ArrayList<Edge>[] graph = new ArrayList[7];
+            ArrayList<Edge>[] graph = new ArrayList[N];
             for (int i = 0; i < N; i++) {
                   graph[i] = new ArrayList<>();
             }
@@ -57,6 +57,7 @@ public class topologicalSort {
             addedge(graph, 4, 3, 50);
             addedge(graph, 4, 5, 60);
             addedge(graph, 4, 6, 70);
+            //-----------
             // display(graph);
             topological_order(graph);
       }

@@ -1,7 +1,7 @@
 import java.util.*;
 
-public class kans_TopologicalSort {
-      public static ArrayList<Integer> topoSort(ArrayList<Edge>[] graph) {
+public class kahns_TopologicalSort {
+      public static void topoSort(ArrayList<Edge>[] graph) {
             int vrtx = graph.length;
             int[] inDgree = new int[vrtx];
             for (int i = 0; i < vrtx; i++) {
@@ -24,7 +24,10 @@ public class kans_TopologicalSort {
                               que.addLast(e.nbr);
                   }
             }
-            return topo_order;
+            for(int i=0; i<topo_order.size(); i++){
+                  System.out.println(topo_order.get(i));
+            }
+            System.out.println();
       }
 
       public static void addedge(ArrayList<Edge>[] graph, int u, int v, int w) {
@@ -43,7 +46,7 @@ public class kans_TopologicalSort {
       }
 
       public static void construction() {
-            int N = 13;
+            int N = 12;
             ArrayList<Edge>[] graph = new ArrayList[N];
             for (int i = 0; i < N; i++) {
                   graph[i] = new ArrayList<>();
@@ -57,9 +60,9 @@ public class kans_TopologicalSort {
             addedge(graph, 11, 9, 70);
             addedge(graph, 11, 10, 70);
             addedge(graph, 8, 9, 70);
-             display(graph);
+             //display(graph);
             // topological_order(graph);
-           // System.out.println(topoSort(graph));
+            topoSort(graph);
       }
 
       public static void main(String[] args) {
