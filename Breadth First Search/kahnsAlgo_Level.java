@@ -8,7 +8,7 @@ public class kahnsAlgo_Level {
 
       for(int i=0; i<V; i++){
           for(Edge e:graph[i]){
-              indegree[e.v]++;
+              indegree[e.nbr]++;
           }
       }
 
@@ -29,9 +29,9 @@ public class kahnsAlgo_Level {
               smallAns.add(ele);
 
               for(Edge e:graph[ele]){
-                  indegree[e.v]--;
-                  if(indegree[e.v]==0){
-                      que.addLast(e.v);
+                  indegree[e.nbr]--;
+                  if(indegree[e.nbr]==0){
+                      que.addLast(e.nbr);
                   }
               }
          }
