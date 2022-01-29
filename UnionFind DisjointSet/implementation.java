@@ -8,7 +8,7 @@ public class implementation {
             if (parent[u] == u)
                   return u;
 
-            return parent[u] = findParent(parent(u));
+            return parent[u] = findParent(parent[u]);
       }
 
       public static void merge(int p1, int p2) {
@@ -44,5 +44,9 @@ public class implementation {
                   }
             }
             return number_component;
+      }
+
+      public static void main(String[] args) {
+
       }
 }
