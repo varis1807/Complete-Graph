@@ -1,33 +1,44 @@
 import java.util.*;
 
 public class kahns_TopologicalSort {
-      public static void topoSort(ArrayList<Edge>[] graph) {
-            int vrtx = graph.length;
-            int[] inDgree = new int[vrtx];
-            for (int i = 0; i < vrtx; i++) {
-                  for (Edge e : graph[i])
-                        inDgree[e.nbr]++;
+      ArrayList<Integer> topological_order_bfs(ArrayList<Edge>[] graph) {
+            int V = graph.length;
+
+            int[] indegree = new int[V];
+
+            for (int i = 0; i < V; i++) {
+                  for (Edge e : graph[i]) {
+                        indegree[e.nbr]++;
+                  }
             }
+
             LinkedList<Integer> que = new LinkedList<>();
             ArrayList<Integer> topo_order = new ArrayList<>();
-            for (int i = 0; i < vrtx; i++) {
-                  if (inDgree[i] == 0)
+
+            for (int i = 0; i < V; i++) {
+                  if (indegree[i] == 0) {
                         que.addLast(i);
+                  }
             }
 
             while (que.size() > 0) {
-                  int rvtx = que.removeFirst();
-                  topo_order.add(rvtx);
-                  for (Edge e : graph[rvtx]) {
-                        inDgree[e.nbr]--;
-                        if (inDgree[e.nbr] == 0)
+                  int ele = que.removeFirst();
+                  topo_order.add(ele);
+
+                  for (Edge e : graph[ele]) {
+                        indegree[e.nbr]--;
+                        if (indegree[e.nbr] == 0) {
                               que.addLast(e.nbr);
+                        }
                   }
             }
-            for(int i=0; i<topo_order.size(); i++){
-                  System.out.println(topo_order.get(i));
+
+            if (topo_order.size() != V) {
+                  System.out.println("NO SOLUTION!!!!!!!");
+                  return new ArrayList<>();
             }
-            System.out.println();
+
+            return topo_order;
       }
 
       public static void addedge(ArrayList<Edge>[] graph, int u, int v, int w) {
@@ -60,9 +71,8 @@ public class kahns_TopologicalSort {
             addedge(graph, 11, 9, 70);
             addedge(graph, 11, 10, 70);
             addedge(graph, 8, 9, 70);
-             //display(graph);
+            // display(graph);
             // topological_order(graph);
-            topoSort(graph);
       }
 
       public static void main(String[] args) {
