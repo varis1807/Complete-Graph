@@ -2,8 +2,12 @@ import java.util.*;
 public class smallestEquivalentStr {
       static int[] par;
       static int[] size;
+      public static int findPar(int u){
+            if(par[u]==u)
+            return u;
+      }
       public static String smallestEquivalentString(string s1, string s2, string baseStr) {
-            par.resize(26);
+            par=new int[26];
         
             for(int i=0; i<26; i++){
                 par[i]=i;
