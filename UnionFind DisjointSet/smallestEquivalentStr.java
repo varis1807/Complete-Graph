@@ -17,16 +17,16 @@ public class smallestEquivalentStr {
                   par[i] = i;
             }
 
-            for (int i = 0; i < s1.size(); i++) {
-                  int u = s1[i] - 'a';
-                  int v = s2[i] - 'a';
+            for (int i = 0; i < s1.length(); i++) {
+                  int u = s1(i) - 'a';
+                  int v = s2(i) - 'a';
 
                   int p1 = findPar(u);
                   int p2 = findPar(v);
 
                   if (p1 != p2) {
-                        par[p2] = min(p1, p2);
-                        par[p1] = min(p1, p2);
+                        par[p2] = Math.min(p1, p2);
+                        par[p1] = Math.min(p1, p2);
                   }
             }
 
