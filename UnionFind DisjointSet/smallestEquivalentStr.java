@@ -30,7 +30,7 @@ public class smallestEquivalentStr {
                   }
             }
 
-            string ans = "";
+            String ans = "";
             for (int i = 0; i < baseStr.size(); i++) {
                   int u = baseStr[i] - 'a';
 
