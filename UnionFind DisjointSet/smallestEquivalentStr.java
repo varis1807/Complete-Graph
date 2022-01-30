@@ -18,8 +18,8 @@ public class smallestEquivalentStr {
             }
 
             for (int i = 0; i < s1.length(); i++) {
-                  int u = s1(i) - 'a';
-                  int v = s2(i) - 'a';
+                  int u = s1.charAt(i) - 'a';
+                  int v = s2.charAt(i) - 'a';
 
                   int p1 = findPar(u);
                   int p2 = findPar(v);
@@ -32,7 +32,7 @@ public class smallestEquivalentStr {
 
             String ans = "";
             for (int i = 0; i < baseStr.length(); i++) {
-                  int u = baseStr[i] - 'a';
+                  int u = baseStr.charAt(i) - 'a';
 
                   int p = findPar(u);
                   ans = ans + (char) ('a' + p);
