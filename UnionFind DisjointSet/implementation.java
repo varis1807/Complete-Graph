@@ -29,8 +29,8 @@ public class implementation {
                   size[i] = 1;
             }
             for (ArrayList<Integer> e : edges) {
-                  int u = edges(0);
-                  int v = edges(1);
+                  int u = e.get(0);
+                  int v = e.get(1);
                   int p1 = findParent(u);
                   int p2 = findParent(v);
                   if (p1 != p2)
