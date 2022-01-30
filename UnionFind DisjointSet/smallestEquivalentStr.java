@@ -1,5 +1,5 @@
 import java.util.*;
-
+// link====?>> https://www.codingninjas.com/codestudio/problems/smallest-equivalent-string_1381859?leftPanelTab=0
 public class smallestEquivalentStr {
       static int[] par;
       static int[] size;
