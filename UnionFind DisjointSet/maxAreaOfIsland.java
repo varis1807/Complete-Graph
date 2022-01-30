@@ -1,13 +1,15 @@
 import java.util.*;
 public class maxAreaOfIsland {
+      static int[] par;
+      static int[] size;
      public static int maxAreaOfIsland(int[][] grid) {
-            int n=grid.size;
+            int n=grid.length;
             if(n==0) return 0;
         
-            int m=grid[0].size();
+            int m=grid[0].length;
         
-            par.resize(n*m);
-            size.resize(n*m);
+            par=new int[n*m];
+            size=new int[n*m];
         
             for(int i=0; i<n*m; i++){
                 par[i]=i;
