@@ -31,7 +31,7 @@ public class smallestEquivalentStr {
             }
 
             String ans = "";
-            for (int i = 0; i < baseStr.size(); i++) {
+            for (int i = 0; i < baseStr.length(); i++) {
                   int u = baseStr[i] - 'a';
 
                   int p = findPar(u);
