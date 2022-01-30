@@ -1,6 +1,14 @@
 import java.util.*;
+
 public class smallStringSwap {
-   public  static int[] par;
+    public static int[] par;
+
+    public static int findPar(int u) {
+        if (par[u] == u)
+            return u;
+        return par[u] = findPar(par[u]);
+    }
+
     public static  String smallestStringWithSwaps(String s, List<List<Integer>> pairs) {
             int n=s.length();
         
@@ -10,9 +18,9 @@ public class smallStringSwap {
                 par[i]=i;
             }        
         
-            for(auto &p:pairs){
-                int p1=findPar(p[0]);
-                int p2=findPar(p[1]);
+            for(List<Integer> p:pairs){
+                int p1=findPar(p.get(0));
+                int p2=findPar(p.get(1));
         
                 if(p1!=p2){
                     par[p1]=p2;
