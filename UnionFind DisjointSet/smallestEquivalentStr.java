@@ -9,7 +9,6 @@ public class smallestEquivalentStr {
                   return u;
             return par[u] = findPar(par[u]);
       }
-
       public static String smallestEquivalentString(String s1, String s2, String baseStr) {
             par = new int[26];
 
@@ -37,7 +36,6 @@ public class smallestEquivalentStr {
                   int p = findPar(u);
                   ans = ans + (char) ('a' + p);
             }
-
             return ans;
       }
 }
