@@ -1,7 +1,15 @@
 import java.util.*;
+
 public class maxAreaOfIsland {
       static int[] par;
       static int[] size;
+
+      public static int findPar(int u) {
+            if (par[u] == u)
+                  return u;
+            return par[u] = findPar(par[u]);
+      }
+
      public static int maxAreaOfIsland(int[][] grid) {
             int n=grid.length;
             if(n==0) return 0;
@@ -16,7 +24,7 @@ public class maxAreaOfIsland {
                 size[i]=1;
             }
         
-            vector<vector<int>> dirs={{0,1},{1,0},{0,-1},{-1,0}};
+            int[][] dirs={{0,1},{1,0},{0,-1},{-1,0}};
         
             for(int i=0; i<n; i++){
                 for(int j=0; j<m; j++){
@@ -56,5 +64,5 @@ public class maxAreaOfIsland {
         
             return maxArea;    
         }
-         
+
 }
