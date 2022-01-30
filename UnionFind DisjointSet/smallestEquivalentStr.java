@@ -10,7 +10,7 @@ public class smallestEquivalentStr {
             return par[u] = findPar(par[u]);
       }
 
-      public static String smallestEquivalentString(string s1, string s2, string baseStr) {
+      public static String smallestEquivalentString(String s1, String s2, String baseStr) {
             par = new int[26];
 
             for (int i = 0; i < 26; i++) {
