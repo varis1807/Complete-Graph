@@ -2,7 +2,7 @@ import java.util.*;
 public class smallestEquivalentStr {
       static int[] par;
       static int[] size;
-      string smallestEquivalentString(string s1, string s2, string baseStr) {
+      public static String smallestEquivalentString(string s1, string s2, string baseStr) {
             par.resize(26);
         
             for(int i=0; i<26; i++){
