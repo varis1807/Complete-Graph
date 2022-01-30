@@ -1,9 +1,10 @@
 import java.util.*;
 public class smallStringSwap {
-      string smallestStringWithSwaps(string s, vector<vector<int>>& pairs) {
-            int n=s.size();
+   public  static int[] par;
+    public static  String smallestStringWithSwaps(String s, List<List<Integer>> pairs) {
+            int n=s.length();
         
-            par.resize(n);
+            par=new int[n];
         
             for(int i=0; i<n; i++){
                 par[i]=i;
