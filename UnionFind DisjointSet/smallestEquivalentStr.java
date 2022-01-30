@@ -5,6 +5,7 @@ public class smallestEquivalentStr {
       public static int findPar(int u){
             if(par[u]==u)
             return u;
+            return par[u]=
       }
       public static String smallestEquivalentString(string s1, string s2, string baseStr) {
             par=new int[26];
