@@ -31,7 +31,7 @@ public class maxAreaOfIsland {
                     if(grid[i][j]==1){
                         int p1=findPar(i*m+j);
         
-                        for(auto const& dir:dirs){
+                        for(int[] dir:dirs){
                             int x=i+dir[0];
                             int y=j+dir[1];
         
@@ -56,7 +56,7 @@ public class maxAreaOfIsland {
                     if(grid[i][j]==1){
                         int p=findPar(i*m+j);
                         if(p==i*m+j){
-                            maxArea=max(maxArea,size[i*m+j]);
+                            maxArea=Math.max(maxArea,size[i*m+j]);
                         }
                     }
                 }
