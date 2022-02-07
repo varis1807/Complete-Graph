@@ -27,7 +27,8 @@ public class smallStringSwap {
                 }
             }
         
-            unordered_map<int,string> m; // parent vs group characaters
+             // parent vs group characaters
+            HashMap<Integer,String> m=new HashMap<>();
         
             for(int i=0; i<n; i++){
                 int p=findPar(i);
@@ -39,11 +40,11 @@ public class smallStringSwap {
                 reverse(kv.second.begin(),kv.second.end());
             }
         
-            string ans="";
+            String ans="";
             for(int i=0; i<n; i++){
                 int p=findPar(i);
         
-                string &s=m[p];
+                String s=m[p];
                 ans+=s[s.size()-1];
         
                 s.pop_back();
