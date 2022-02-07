@@ -10,7 +10,6 @@ class Edge {
             this.nbr = nbr;
             this.wt = wt;
       }
-
 }
 
 public class construction {
