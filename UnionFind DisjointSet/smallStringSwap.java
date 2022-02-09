@@ -32,7 +32,7 @@ public class smallStringSwap {
         
             for(int i=0; i<n; i++){
                 int p=findPar(i);
-                m[p]=m[p]+s[i];
+                m(p)=m[p]+s[i];
             }
         
             for(auto &kv:m){
